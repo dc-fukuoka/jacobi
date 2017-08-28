@@ -17,7 +17,9 @@ how to run:
     
     $ mpirun -np $NP ./jacobi_mpi.intel   # for Xeon phi  
     or  
-    $ mpirun -np $NP ./jacobi_acc_mpi.pgi # for GPU  
+    $ mpirun -np $NP ./jacobi_acc_mpi.pgi # for GPU
+    # where $NP = np_m * np_n
+    
     $ gnuplot # splot "jacobi.dat" w l
 
 performance comparison:
