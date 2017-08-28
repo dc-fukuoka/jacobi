@@ -18,9 +18,10 @@ how to run:
     $ mpirun -np $NP ./jacobi_mpi.intel   # for Xeon phi  
     or  
     $ mpirun -np $NP ./jacobi_acc_mpi.pgi # for GPU  
-    $ gnuplot # splot "jacobi.dat" w l  
+    $ gnuplot # splot "jacobi.dat" w l
+
+performance comparison:
 ============
-performance comparison:  
 iter_max=10000  
 m=4096, n=4096  
   
