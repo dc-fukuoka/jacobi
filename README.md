@@ -20,6 +20,12 @@ how to run:
     $ mpirun -np $NP ./jacobi_acc_mpi.pgi # for GPU
     # where $NP = np_m * np_n
     
+    # if you do not have GPU nor Xeon Phi,
+    $ mpirun -np $NP ./jacobi_mpi.intel.nooffload
+    or
+    $ mpirun -np $NP ./jacobi_mpi.pgi
+
+    # to view the result
     $ gnuplot # splot "jacobi.dat" w l
 
 performance comparison:
