@@ -1,5 +1,5 @@
 jacobi - a benchmark by solving 2D laplace equation with jacobi iterative method.  
-         intel Xeon Phi and GPUs can be used.  
+         GPU or Xeon Phi can be used.  
 ============
 how to run:  
   
