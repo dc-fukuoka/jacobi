@@ -1,0 +1,2 @@
+- use MPI-I/O to read the input data
+- implement cuda version instead of OpenACC
