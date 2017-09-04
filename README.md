@@ -42,3 +42,8 @@ with Xeon E5-2650(10 cores/socket, 2 sockets) + NVIDIA Tesla K80 x3, 2 nodes (np
 ------------
 only CPU[s]: 37.0406  
 CPU + GPU[s]: 7.62425
+  
+the following is an example of calculation result.
+------------
+m=1024 n=1024  
+![Alt text](jacobi.gif?raw=true "jacobi.gif")
