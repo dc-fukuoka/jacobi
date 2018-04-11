@@ -40,7 +40,7 @@ CPU + MIC[s]: 29.1181
   
 with Xeon E5-2680 v4(14 cores/socket, 2 sockets) + NVIDIA Tesla P100 x4, 2 nodes (np_m=1, np_n=8):
 ------------
-only CPU[s]: 76.6943  
+only CPU[s]: 94.7290  
 CPU + GPU[s]: 5.29180  
   
 the following is an example of calculation result.
@@ -48,29 +48,29 @@ the following is an example of calculation result.
 m=1024 n=1024  
 with GPU:  
 ~~~~
-$ mpirun -npernode 6 ./jacobi_acc_mpi.pgi
+$ mpirun -x LD_LIBRARY_PATH -np 8 -npernode 4 -bind-to socket ./jacobi_acc_mpi.pgi
  iter_max:        10000
- m:         1024 n:         1024
- np:           12
- np_m:            1 np_n:           12
-    0  0.499512
- 1000  0.000349
- 2000  0.000172
- 3000  0.000113
- 4000  0.000084
- 5000  0.000067
- 6000  0.000055
- 7000  0.000047
- 8000  0.000041
- 9000  0.000036
-10000  0.000032
-Total CPU time:    4.18754
-Device init   :    1.36887
-Setup problem :   0.860450
-Data copyin   :   0.410668E-01
-Computation   :    1.87990
-Data copyout  :   0.349710E-02
-Output        :   0.337530E-01
+ m:         4096 n:         4096
+ np:            8
+ np_m:            1 np_n:            8
+    0  0.499878
+ 1000  0.000357
+ 2000  0.000178
+ 3000  0.000118
+ 4000  0.000088
+ 5000  0.000071
+ 6000  0.000059
+ 7000  0.000050
+ 8000  0.000044
+ 9000  0.000039
+10000  0.000035
+Total CPU time:    5.29180
+Device init   :    1.91826
+Setup problem :   0.841110E-01
+Data copyin   :   0.291271E-01
+Computation   :    3.13129
+Data copyout  :   0.277512E-01
+Output        :   0.101262
 ~~~~
 ![Alt text](jacobi.gpu.gif?raw=true "calculated by GPU")
 
