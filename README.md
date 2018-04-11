@@ -38,10 +38,10 @@ with Xeon E5-2680(8 cores/socket, 2 sockets) + Xeon Phi 5110P x2, 2 nodes (np_m=
 only CPU[s]: 66.7373  
 CPU + MIC[s]: 29.1181  
   
-with Xeon E5-2650(10 cores/socket, 2 sockets) + NVIDIA Tesla K80 x3, 2 nodes (np_m=1, np_n=12):
+with Xeon E5-2680 v4(14 cores/socket, 2 sockets) + NVIDIA Tesla P100 x4, 2 nodes (np_m=1, np_n=8):
 ------------
-only CPU[s]: 37.0406  
-CPU + GPU[s]: 7.62425
+only CPU[s]: 76.6943  
+CPU + GPU[s]: 5.29180  
   
 the following is an example of calculation result.
 ------------
