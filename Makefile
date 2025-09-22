@@ -13,7 +13,7 @@ jacobi_mpi.pgi: jacobi.f90
 	mpif90 -D_MPI -DOVERLAP -o $@ -Mpreprocess -O4 -Mvect=simd:256 -Mfma -mp $<
 
 jacobi_acc_mpi.pgi: jacobi.f90
-	mpif90 -D_MPI -DOVERLAP -o $@ -Mpreprocess -O4 -Mvect=simd:256 -Mfma -acc -ta=tesla:cc60 -Minfo=accel $<
+	mpif90 -D_MPI -DOVERLAP -o $@ -Mpreprocess -O4 -Mvect=simd:256 -Mfma -acc -Minfo=accel $<
 
 clean:
 	rm -f jacobi_mpi.intel jacobi_mpi.intel.nooffload jacobi_mpi.pgi jacobi_acc_mpi.pgi jacobi.dat fort.999 *.mod *.modmic

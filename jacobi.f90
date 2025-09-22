@@ -273,7 +273,7 @@ subroutine initialize_device()
   !call cpu_time(time(1))
   call system_clock(clock(1),clock_rate,max_count)
 #if !defined(GCC) && defined(_OPENACC)
-  !$acc init device_type(acc_device_default)
+  !$acc init device_type(nvidia)
 #endif
 #ifdef GCC
   call acc_init(acc_device_nvidia)
